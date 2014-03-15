@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <jsp:useBean id="member_A" scope="request" type="java.lang.String" />
 <jsp:useBean id="member_B" scope="request" type="java.lang.String" />
+<jsp:useBean id="member_A_name" scope="request" type="java.lang.String" />
+<jsp:useBean id="member_B_name" scope="request" type="java.lang.String" />
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -57,7 +59,7 @@
       <form action="RatingServlet" method="post">
         <input type="hidden" name="id_win" value=<%=member_A%>/>
 		<input type="hidden" name="id_lose" value=<%=member_B%>/>
-		<input class="btn btn-danger" type="submit" value=<%=member_A%>  />
+		<input class="btn btn-danger" type="submit" value=<%=member_A_name%>  />
 	  </form>
       </div>
       <br>
@@ -65,7 +67,7 @@
 	  <form>
 			<input type="hidden" name="id_win" value=<%=member_B%>/>
 			<input type="hidden" name="id_lose" value=<%=member_A%>/>
-			<input class="btn btn-success" type="submit" value=<%=member_B%>  />
+			<input class="btn btn-success" type="submit" value=<%=member_B_name%>  />
 	  </form>
       </div>
     </div>
