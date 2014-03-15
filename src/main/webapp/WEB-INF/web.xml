@@ -4,4 +4,38 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
+  
+  	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ButtleServlet</servlet-name>
+		<servlet-class>ButtleServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RatingServlet</servlet-name>
+		<servlet-class>RatingServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RankingServlet</servlet-name>
+		<servlet-class>RankingServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ButtleServlet</servlet-name>
+		<url-pattern>/ButtleServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RatingServlet</servlet-name>
+		<url-pattern>/RatingServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RankingServlet</servlet-name>
+		<url-pattern>/RankingServlet</url-pattern>
+	</servlet-mapping>
 </web-app>
