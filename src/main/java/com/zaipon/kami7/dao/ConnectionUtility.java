@@ -25,7 +25,7 @@ public class ConnectionUtility {
 			// データベースの指定
 			String server   = "ec2-54-225-101-119.compute-1.amazonaws.com";   // PostgreSQL サーバ ( IP または ホスト名 )
 			String dbname   = "dbc285t3b5t1rl";         // データベース名
-			String url = "postgres://ec2-54-225-101-119.compute-1.amazonaws.com:5432/dbc285t3b5t1rl";
+			String url = "jdbc:postgresql://ec2-54-225-101-119.compute-1.amazonaws.com:5432/dbc285t3b5t1rl";
 			String user     = "pxveoglutvfuzz";         //データベース作成ユーザ名
 			String password = "RsaIdqg7MXJmOMsXP3LwOxgsTt";     //データベース作成ユーザパスワード
 			Class.forName (driver);
