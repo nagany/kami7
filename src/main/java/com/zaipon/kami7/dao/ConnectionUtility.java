@@ -11,9 +11,9 @@ public class ConnectionUtility {
 			// JDBCドライバの登録
 			String driver = "org.postgresql.Driver";
 			// データベースの指定
-			String server   = "localhost";   // PostgreSQL サーバ ( IP または ホスト名 )
+			String server   = "kami7.herokuapp.com";   // PostgreSQL サーバ ( IP または ホスト名 )
 			String dbname   = "postgres";         // データベース名
-			String url = "jdbc:postgresql://localhost:5432/postgres";
+			String url = "jdbc:postgresql://kami7.herokuapp.com:5432/postgres";
 			String user     = "postgres";         //データベース作成ユーザ名
 			String password = "postgres";     //データベース作成ユーザパスワード
 			Class.forName (driver);
