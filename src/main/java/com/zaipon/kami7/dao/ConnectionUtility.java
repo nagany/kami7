@@ -26,7 +26,6 @@ public class ConnectionUtility {
 		} catch (ClassNotFoundException ex) {
 			ex.printStackTrace ();
 		}
-		return null;
 	}
 
 	public void closeConnection(Connection conn){
