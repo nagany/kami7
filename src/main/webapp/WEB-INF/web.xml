@@ -7,19 +7,19 @@
   
   	<servlet>
 		<servlet-name>LoginServlet</servlet-name>
-		<servlet-class>LoginServlet</servlet-class>
+		<servlet-class>com.zaipon.kami7.servlet.LoginServlet</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>ButtleServlet</servlet-name>
-		<servlet-class>ButtleServlet</servlet-class>
+		<servlet-class>com.zaipon.kami7.servlet.ButtleServlet</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>RatingServlet</servlet-name>
-		<servlet-class>RatingServlet</servlet-class>
+		<servlet-class>com.zaipon.kami7.servlet.RatingServlet</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>RankingServlet</servlet-name>
-		<servlet-class>RankingServlet</servlet-class>
+		<servlet-class>com.zaipon.kami7.servlet.RankingServlet</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
