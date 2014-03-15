@@ -23,10 +23,9 @@ public class MemberDao {
 		
 		try {
 			//con = createConnection();
-			con = connUtil.getConnection();
+			con = connUtil.createConnection();
 			
 			StringBuilder sb = new StringBuilder();
-			/*
 			sb.append("select").append("\r\n");
 			sb.append("rate.member_id, member.member_name, member_image.image_path, rate.rate").append("\r\n");
 			sb.append("from").append("\r\n");
@@ -38,8 +37,7 @@ public class MemberDao {
 			sb.append("rate.delete_flag = false").append("\r\n");
 			sb.append("order by rate.member_id;").append("\r\n");
 
-			*/
-			sb.append("select * from rate;");
+			
 			String sql = sb.toString();
 			
 			Statement stmt = con.createStatement();
