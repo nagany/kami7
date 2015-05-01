@@ -55,7 +55,9 @@ public class RatingServlet extends HttpServlet {
 			//ログインしている場合
 			
 			String id_win = request.getParameter("id_win");
+			id_win = id_win.substring(0,id_win.length()-1);
 			String id_lose = request.getParameter("id_lose");
+			id_lose = id_lose.substring(0,id_lose.length()-1);
 			
 			RateDto winner = this.rateDao.find(1, Integer.parseInt(id_win));
 			winner.getRate();
