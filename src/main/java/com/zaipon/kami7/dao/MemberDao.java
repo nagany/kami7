@@ -52,8 +52,9 @@ public class MemberDao {
 			System.out.println("==== prepare  memdtolist:"+memberDtoList+" ===");
 
 			int lastId = 0;
+			int nowId = 0;
 			while(rs.next()){
-				int nowId = rs.getInt("member_id");
+				nowId = rs.getInt("member_id");
 				System.out.println("==== rs:nowID:"+nowId+"/lastId:"+lastId+"===");
 				if(nowId != lastId){//次の人へ移った場合はリストに追加する
 					memberDto = new MemberDto();
