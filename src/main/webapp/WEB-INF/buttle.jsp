@@ -56,6 +56,7 @@
       
     <div class="row">
       <div class="span4">
+      <span><%=member_A%></span>
       <form action="RatingServlet" method="post">
         <input type="hidden" name="id_win" value=<%=member_A%>/>
 		<input type="hidden" name="id_lose" value=<%=member_B%>/>
@@ -64,7 +65,7 @@
       </div>
       <br>
       <div class="span4">
-	  <form>
+      <form action="RatingServlet" method="post">
 			<input type="hidden" name="id_win" value=<%=member_B%>/>
 			<input type="hidden" name="id_lose" value=<%=member_A%>/>
 			<input class="btn btn-success" type="submit" value=<%=member_B_name%>  />
