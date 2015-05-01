@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 import com.zaipon.kami7.dao.MemberDao;
+import com.zaipon.kami7.dao.RateDao;
 import com.zaipon.kami7.dao.impl.MockMemberDao;
 import com.zaipon.kami7.dao.impl.MockRateDao;
 import com.zaipon.kami7.dto.MemberDto;
@@ -18,11 +19,11 @@ public class MemberBusiness {
 	//return: List<MemberDto>
 
 	MemberDao memberDao;
-	MockRateDao rateDao;
+	RateDao rateDao;
 	
 	public MemberBusiness() {
 		this.memberDao = new MemberDao();
-		this.rateDao = new MockRateDao();
+		this.rateDao = new RateDao();
 	}
 	
 	public List<MemberForm> getEntry(Integer categoryId){
