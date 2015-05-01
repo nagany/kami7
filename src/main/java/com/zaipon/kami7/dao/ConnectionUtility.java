@@ -17,6 +17,9 @@ public class ConnectionUtility {
 
 		System.out.println("=========================");
 		System.out.println("conUtil/getConnection isCalled.");
+		System.out.println("dbUrl:"+dbUrl);
+		System.out.println("username:"+username);
+		System.out.println("password:"+password);
 		System.out.println(DriverManager.getConnection(dbUrl, username, password));
 		System.out.println("=========================");
 	    
