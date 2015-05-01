@@ -66,7 +66,7 @@ public class MemberDao {
 					memberDtoList.add(memberDto);
 					lastId = nowId;
 				}else{//同じ人の場合は画像パスをaddするだけ
-					//memberDtoList.get(memberDtoList.size()-1).getImgPaths().add(rs.getString("image_path"));
+					memberDtoList.get(memberDtoList.size()-1).getImgPaths().add(rs.getString("image_path"));
 				}
 			}
 			System.out.println("==== return memDtoList  ===");

@@ -7,6 +7,10 @@ public class MemberDto {
 	private String memberName;
 	private ArrayList<String> imgPaths;
 	
+	public MemberDto() {
+		this.imgPaths = new ArrayList<String>();
+	}
+	
 	public Integer getMemberId() {
 		return memberId;
 	}
