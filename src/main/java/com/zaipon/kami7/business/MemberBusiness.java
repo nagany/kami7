@@ -83,6 +83,7 @@ public class MemberBusiness {
 	}
 		
 	private Integer eloRating(Integer winnerRate, Integer loserRate){
+		System.out.println("|||||  winRate:"+winnerRate+"/losRate:"+loserRate);
 		double value = 16 + (loserRate - winnerRate) * 0.04;
 		System.out.println(value);
 		
