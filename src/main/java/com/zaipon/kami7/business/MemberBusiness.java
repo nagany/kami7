@@ -30,6 +30,9 @@ public class MemberBusiness {
 		System.out.println("memberbusiness/getEntry isCalled.  categoryId="+categoryId);
 		System.out.println("=========================");
 		ArrayList<MemberDto> dtoList =	this.memberDao.searchEntry(categoryId);
+		System.out.println("memBusi/getEntry: dtoList="+dtoList);
+		System.out.println("memBusi/getEntry: dtoList.size="+dtoList.size());
+		System.out.println("memBusi/getEntry: dtoList.get(0)="+dtoList.get(0));
 		
 		MemberForm form;
 		int randIndex;
