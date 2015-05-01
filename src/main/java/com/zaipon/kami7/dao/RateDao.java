@@ -16,7 +16,7 @@ public class RateDao {
 		ConnectionUtility connUtil = new ConnectionUtility();
 		
 		try {
-			con = connUtil.getConnection();
+			con = ConnectionUtility.getConnection();
 			
 			StringBuilder sb = new StringBuilder();
 			sb.append("select").append("\r\n");

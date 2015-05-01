@@ -14,6 +14,12 @@ public class ConnectionUtility {
 	    String password = dbUri.getUserInfo().split(":")[1];
 	    String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
 
+
+		System.out.println("=========================");
+		System.out.println("conUtil/getConnection isCalled.");
+		System.out.println(DriverManager.getConnection(dbUrl, username, password));
+		System.out.println("=========================");
+	    
 	    return DriverManager.getConnection(dbUrl, username, password);
 	}
 

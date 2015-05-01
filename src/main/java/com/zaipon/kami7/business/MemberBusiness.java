@@ -26,6 +26,9 @@ public class MemberBusiness {
 	}
 	
 	public List<MemberForm> getEntry(Integer categoryId){
+		System.out.println("=========================");
+		System.out.println("memberbusiness/getEntry isCalled.  categoryId="+categoryId);
+		System.out.println("=========================");
 		ArrayList<MemberDto> dtoList =	this.memberDao.searchEntry(categoryId);
 		
 		MemberForm form;
@@ -47,6 +50,9 @@ public class MemberBusiness {
 	}
 	
 	public HashSet<MemberForm> getPair(Integer categoryId){
+		System.out.println("=========================");
+		System.out.println("memberbusiness/getPair isCalled.  categoryId="+categoryId);
+		System.out.println("=========================");
 		List<MemberForm> list = this.getEntry(categoryId);
 		HashSet<MemberForm> pair = new HashSet<MemberForm>();
 		int randIndex;
