@@ -59,8 +59,6 @@ public class RatingServlet extends HttpServlet {
 			String id_lose = request.getParameter("id_lose");
 			id_lose = id_lose.substring(0,id_lose.length()-1);
 			
-			RateDto winner = this.rateDao.find(1, Integer.parseInt(id_win));
-			winner.getRate();
 			MatchResultCommand command = new MatchResultCommand();
 			command.setCategoryId(1);
 			command.setWinnerId(Integer.parseInt(id_win));

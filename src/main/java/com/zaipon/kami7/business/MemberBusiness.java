@@ -71,6 +71,7 @@ public class MemberBusiness {
 	public void updateRate(MatchResultCommand command){
 		RateDto winnerRate = this.rateDao.find(command.getCategoryId(),command.getWinnerId());
 		RateDto loserRate = this.rateDao.find(command.getCategoryId(),command.getLoserId());
+		System.out.println("|||||  winRate:"+winnerRate+"/losRate:"+loserRate);
 		
 		int value = this.eloRating(winnerRate.getRate(), loserRate.getRate());
 		
@@ -83,7 +84,6 @@ public class MemberBusiness {
 	}
 		
 	private Integer eloRating(Integer winnerRate, Integer loserRate){
-		System.out.println("|||||  winRate:"+winnerRate+"/losRate:"+loserRate);
 		double value = 16 + (loserRate - winnerRate) * 0.04;
 		System.out.println(value);
 		
