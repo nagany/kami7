@@ -62,7 +62,7 @@ public class RatingServlet extends HttpServlet {
 			MatchResultCommand command = new MatchResultCommand();
 			command.setCategoryId(1);
 			command.setWinnerId(Integer.parseInt(id_win));
-			command.setWinnerId(Integer.parseInt(id_lose));
+			command.setLoserId(Integer.parseInt(id_lose));
 			this.business.updateRate(command);
 			//レート処理
 			
