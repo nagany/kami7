@@ -16,7 +16,8 @@ public class ConnectionUtility {
 
 	    return DriverManager.getConnection(dbUrl, username, password);
 	}
-	
+
+	/*
 	public Connection createConnection(){
 
 		try {
@@ -40,6 +41,7 @@ public class ConnectionUtility {
 		}
 		return null;
 	}	
+	*/
 
 	public void closeConnection(Connection conn){
 		try {

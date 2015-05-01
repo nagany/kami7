@@ -23,7 +23,7 @@ public class MemberDao {
 		
 		try {
 			//con = createConnection();
-			con = connUtil.createConnection();
+			con = connUtil.getConnection();
 			
 			StringBuilder sb = new StringBuilder();
 			sb.append("select").append("\r\n");
