@@ -48,7 +48,12 @@ public class RateDao {
 			e.printStackTrace();
 			return null;
 		} finally {
-			connUtil.closeConnection(con);
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 	
@@ -79,7 +84,12 @@ public class RateDao {
 		}catch (Exception e){
 			e.printStackTrace();
 		} finally {
-			connUtil.closeConnection(con);
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 }

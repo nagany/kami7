@@ -81,7 +81,12 @@ public class MemberDao {
 			System.out.println("==== Exception  ==="+ e.toString());
 			return null;
 		} finally {
-			connUtil.closeConnection(con);
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			};
 		}
 	}
 
