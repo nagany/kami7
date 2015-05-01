@@ -40,6 +40,8 @@ public class MemberDao {
 			
 			String sql = sb.toString();
 			
+			System.out.println(sql);
+			
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
 
@@ -60,12 +62,16 @@ public class MemberDao {
 					memberDtoList.get(memberDtoList.size()-1).getImgPaths().add(rs.getString("image_path"));
 				}
 			}
+			System.out.println("==== return memDtoList  ===");
+			
 			return memberDtoList;
 		} catch (SQLException e) {
 			e.printStackTrace();
+			System.out.println("==== SQL Exception  ===");
 			return null;
 		}catch (Exception e){
 			e.printStackTrace();
+			System.out.println("==== Exception  ==="+ e.toString());
 			return null;
 		} finally {
 			connUtil.closeConnection(con);
