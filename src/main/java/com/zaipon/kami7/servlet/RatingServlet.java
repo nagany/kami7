@@ -31,7 +31,7 @@ public class RatingServlet extends HttpServlet {
     public RatingServlet() {
         super();
         rateDao = new RateDao();
-        // TODO Auto-generated constructor stub
+        this.business = new MemberBusiness();
     }
 
 	/**
