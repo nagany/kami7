@@ -54,6 +54,7 @@ public class MemberDao {
 			int lastId = 0;
 			while(rs.next()){
 				int nowId = rs.getInt("member_id");
+				System.out.println("==== nowID:"+nowId+"/lastId:"+lastId+"===");
 				if(nowId != lastId){//次の人へ移った場合はリストに追加する
 					memberDto = new MemberDto();
 					memberDto.setMemberId(nowId);
@@ -62,7 +63,7 @@ public class MemberDao {
 					memberDtoList.add(memberDto);
 					lastId = nowId;
 				}else{//同じ人の場合は画像パスをaddするだけ
-					memberDtoList.get(memberDtoList.size()-1).getImgPaths().add(rs.getString("image_path"));
+					//memberDtoList.get(memberDtoList.size()-1).getImgPaths().add(rs.getString("image_path"));
 				}
 			}
 			System.out.println("==== return memDtoList  ===");
