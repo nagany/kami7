@@ -24,6 +24,7 @@ public class MemberDao {
 		try {
 			//con = createConnection();
 			con = ConnectionUtility.getConnection();
+			System.out.println("==== getConnection  ===");
 			
 			StringBuilder sb = new StringBuilder();
 			sb.append("select").append("\r\n");
@@ -40,13 +41,15 @@ public class MemberDao {
 			
 			String sql = sb.toString();
 			
-			System.out.println(sql);
-			
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
 
+			System.out.println("==== executeSQL  rs:"+rs+" ===");
+
 			ArrayList<MemberDto> memberDtoList = new ArrayList<MemberDto>();
 			MemberDto memberDto;
+
+			System.out.println("==== prepare  memdtolist:"+memberDtoList+" ===");
 
 			int lastId = 0;
 			while(rs.next()){
