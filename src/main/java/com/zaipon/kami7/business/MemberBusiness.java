@@ -27,13 +27,7 @@ public class MemberBusiness {
 	}
 	
 	public List<MemberForm> getEntry(Integer categoryId){
-		System.out.println("=========================");
-		System.out.println("memberbusiness/getEntry isCalled.  categoryId="+categoryId);
-		System.out.println("=========================");
 		ArrayList<MemberDto> dtoList =	this.memberDao.searchEntry(categoryId);
-		System.out.println("memBusi/getEntry: dtoList="+dtoList);
-		System.out.println("memBusi/getEntry: dtoList.size="+dtoList.size());
-		System.out.println("memBusi/getEntry: dtoList.get(0)="+dtoList.get(0));
 		
 		MemberForm form;
 		int randIndex;
@@ -54,9 +48,6 @@ public class MemberBusiness {
 	}
 	
 	public HashSet<MemberForm> getPair(Integer categoryId){
-		System.out.println("=========================");
-		System.out.println("memberbusiness/getPair isCalled.  categoryId="+categoryId);
-		System.out.println("=========================");
 		List<MemberForm> list = this.getEntry(categoryId);
 		HashSet<MemberForm> pair = new HashSet<MemberForm>();
 		int randIndex;
@@ -71,8 +62,6 @@ public class MemberBusiness {
 	public void updateRate(MatchResultCommand command){
 		RateDto winnerRate = this.rateDao.find(command.getCategoryId(),command.getWinnerId());
 		RateDto loserRate = this.rateDao.find(command.getCategoryId(),command.getLoserId());
-		System.out.println("|||||  winId:"+command.getWinnerId()+"/losId:"+command.getLoserId());
-		System.out.println("|||||  winRate:"+winnerRate.getRate()+"/losRate:"+loserRate.getRate());
 		
 		int value = this.eloRating(winnerRate.getRate(), loserRate.getRate());
 		
@@ -83,7 +72,6 @@ public class MemberBusiness {
 		
 	private Integer eloRating(Integer winnerRate, Integer loserRate){
 		double value = 16 + (loserRate - winnerRate) * 0.04;
-		System.out.println(value);
 		
 		if(value < 1){
 			return 1;
