@@ -41,6 +41,9 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="#">battle</a></li>
           </ul>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="RankingServlet">ranking</a></li>
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
