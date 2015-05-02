@@ -1,9 +1,13 @@
 package com.zaipon.kami7.dto;
 
 public class RateDto {
+
 	private Integer categoryId;
 	private Integer memberId;
 	private Integer rate;
+	private String memberName;
+	private String categoryName;
+
 	public Integer getCategoryId() {
 		return categoryId;
 	}
@@ -22,5 +26,16 @@ public class RateDto {
 	public void setRate(Integer rate) {
 		this.rate = rate;
 	}
-	
+	public String getMemberName() {
+		return memberName;
+	}
+	public void setMemberName(String memberName) {
+		this.memberName = memberName;
+	}
+	public String getCategoryName() {
+		return categoryName;
+	}
+	public void setCategoryName(String categoryName) {
+		this.categoryName = categoryName;
+	}
 }
