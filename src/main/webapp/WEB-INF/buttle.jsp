@@ -13,7 +13,7 @@
     <title>投票</title>
 
     <!-- Bootstrap --><!-- Latest compiled and minified CSS -->
-    
+
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 <!-- Optional theme -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
@@ -47,7 +47,7 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-    
+
     <div class="container">
   		<br>
 		<br>
@@ -60,15 +60,15 @@
 		<input type="hidden" name="id_lose" value=<%=member_B%>/>
 		<input class="btn btn-danger" type="submit" value=<%=member_A_name%>  />
       </form>
-       
+
        <span><strong>VS</strong></span>
-         
+
       <form action="RatingServlet" method="post" style="display:inline;">
 			<input type="hidden" name="id_win" value=<%=member_B%>/>
 			<input type="hidden" name="id_lose" value=<%=member_A%>/>
 			<input class="btn btn-success" type="submit" value=<%=member_B_name%>  />
 	  </form>
-	  
+
      <br>
      <br>
      <div><a href="RankingServlet" class="btn btn-info">神7を見る</a></div>
@@ -77,5 +77,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- google ads -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- zaipon_kami7_01 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:100px"
+     data-ad-client="ca-pub-1128054906699548"
+     data-ad-slot="2046883475"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<!-- google ads -->
+
   </body>
 </html>
