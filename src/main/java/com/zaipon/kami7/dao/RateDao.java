@@ -101,6 +101,7 @@ public class RateDao {
 
 		Connection con = null;
 
+		//ここなおす
 		try {
 			con = ConnectionUtility.getConnection();
 
