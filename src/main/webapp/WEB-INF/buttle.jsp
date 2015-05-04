@@ -39,7 +39,7 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">battle</a></li>
+            <li class="active"><a href="ButtleServlet">battle</a></li>
           </ul>
           <ul class="nav navbar-nav">
             <li class="active"><a href="RankingServlet">ranking</a></li>
