@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap 101 Template</title>
+    <title>投票</title>
 
     <!-- Bootstrap --><!-- Latest compiled and minified CSS -->
     
@@ -48,34 +48,29 @@
       </div>
     </div>
     
-
-
     <div class="container">
+  		<br>
 		<br>
 		<br>
 		<br>
-		<br>
-	<p>どちらかを選択</p>
-      
-    <div class="row">
-      <div class="span4">
-      <span><%=member_A%></span>
-      <form action="RatingServlet" method="post">
+      <p>勝ちだと思う方を押してね！</p>
+     
+     <div class="row">
+      <form action="RatingServlet" method="post" style="display:inline;">
         <input type="hidden" name="id_win" value=<%=member_A%>/>
 		<input type="hidden" name="id_lose" value=<%=member_B%>/>
 		<input class="btn btn-danger" type="submit" value=<%=member_A_name%>  />
-	  </form>
-      </div>
-      <br>
-      <div class="span4">
-      <form action="RatingServlet" method="post">
+      </form>
+       
+       <span><strong>VS</strong></span>
+         
+      <form action="RatingServlet" method="post" style="display:inline;">
 			<input type="hidden" name="id_win" value=<%=member_B%>/>
 			<input type="hidden" name="id_lose" value=<%=member_A%>/>
 			<input class="btn btn-success" type="submit" value=<%=member_B_name%>  />
 	  </form>
-      </div>
-    </div>
-		
+     
+     </div><!-- row -->
     </div><!-- /.container -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
