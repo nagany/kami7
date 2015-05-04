@@ -85,6 +85,7 @@
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
 <!-- google ads -->
+<div align="center">
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- zaipon_kami7_01 -->
 <ins class="adsbygoogle"
@@ -94,6 +95,7 @@
 <script>
 (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+</div>
 <!-- google ads -->
 
   </body>
