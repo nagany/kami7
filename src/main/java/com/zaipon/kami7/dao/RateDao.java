@@ -101,12 +101,13 @@ public class RateDao {
 
 		Connection con = null;
 
+		//ここなおす
 		try {
 			con = ConnectionUtility.getConnection();
 
 			StringBuilder sb = new StringBuilder();
 			sb.append("select").append("\r\n");
-			sb.append("rate.category_id, rate.member_id, rate.rate, member.member_name, category.category_id").append("\r\n");
+			sb.append("rate.category_id, rate.member_id, rate.rate, member.member_name, category.category_name").append("\r\n");
 			sb.append("from rate").append("\r\n");
 			sb.append("inner join member on rate.member_id = member.member_id").append("\r\n");
 			sb.append("inner join category on rate.category_id = category.category_id").append("\r\n");
