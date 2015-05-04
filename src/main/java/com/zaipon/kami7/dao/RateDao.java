@@ -121,9 +121,10 @@ public class RateDao {
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery(sql);
 
-			RateDto rateDto = new RateDto();
+			RateDto rateDto = null;
 
 			while(rs.next()){
+				rateDto = new RateDto();
 				rateDto.setCategoryId(rs.getInt("category_id"));
 				rateDto.setMemberId(rs.getInt("member_id"));
 				rateDto.setRate(rs.getInt("rate"));
