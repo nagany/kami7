@@ -54,13 +54,13 @@
 	  <tr>
 	    <th>順位</th><th>メンバー</th>
 	  <tr class="info">
-	    <td><strong>1</strong></td><td><strong><%= rank[1] %></strong></td>
+	    <td><strong>1</strong></td><td><strong><%= rank[0] %></strong></td>
 	  </tr>
 	  <tr class="success">
-	    <td><strong>2</strong></td><td><strong><%= rank[2] %></strong></td>
+	    <td><strong>2</strong></td><td><strong><%= rank[1] %></strong></td>
 	  </tr>
 	  <tr class="danger">
-	    <td><strong>3</strong></td><td><strong><%= rank[1] %></strong></td>
+	    <td><strong>3</strong></td><td><strong><%= rank[2] %></strong></td>
 	  </tr>
   	  <%
 		for (int i = 3; i < 7; i++) {
