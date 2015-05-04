@@ -45,7 +45,7 @@ public class RankingServlet extends HttpServlet {
 
 			request.setAttribute("rank", rank);
 
-			request.getRequestDispatcher("ranking.jsp").forward(request, response);
+			request.getRequestDispatcher("WEB-INF/ranking.jsp").forward(request, response);
 		}else{
 			request.getRequestDispatcher("login.html").forward(request, response);
 		}
