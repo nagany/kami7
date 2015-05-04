@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -37,20 +37,20 @@ public class LoginServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
+
 		request.setCharacterEncoding("UTF-8");
 		String pass = request.getParameter("pass");
-		
+
 		if(pass.equals("kami0315")){
 			//login success
 			HttpSession session = request.getSession(true);
 			session.setAttribute("login_flag", true);
-			
-			request.getRequestDispatcher("ButtleServlet").forward(request, response);
+
+			request.getRequestDispatcher("RankingServlet").forward(request, response);
 		}else{
 			request.getRequestDispatcher("login.html").forward(request, response);
 		}
-		
+
 	}
 
 }

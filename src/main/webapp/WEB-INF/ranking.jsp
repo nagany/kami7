@@ -10,7 +10,7 @@
     <title>神7</title>
 
     <!-- Bootstrap --><!-- Latest compiled and minified CSS -->
-    
+
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 <!-- Optional theme -->
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
@@ -36,7 +36,7 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">battle</a></li>
+            <li class="active"><a href="ButtleServlet">battle</a></li>
           </ul>
           <ul class="nav navbar-nav">
             <li class="active"><a href="RankingServlet">ranking</a></li>
@@ -44,7 +44,7 @@
         </div><!--/.nav-collapse -->
       </div>
     </div>
-    
+
     <div class="container">
   		<br>
 		<br>
@@ -77,11 +77,26 @@
 	</table>
 	<br>
      <div><a href="ButtleServlet" class="btn btn-info">投票する</a></div>
-     
+
 	</div><!-- /.container -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- google ads -->
+<div align="center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- zaipon_kami7_01 -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:320px;height:100px"
+     data-ad-client="ca-pub-1128054906699548"
+     data-ad-slot="2046883475"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
+<!-- google ads -->
+
   </body>
 </html>
