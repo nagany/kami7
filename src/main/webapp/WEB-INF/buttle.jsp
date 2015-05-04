@@ -54,8 +54,7 @@
 		<br>
 		<br>
       <p>勝ちだと思う方を押してね！</p>
-     
-     <div class="row">
+
       <form action="RatingServlet" method="post" style="display:inline;">
         <input type="hidden" name="id_win" value=<%=member_A%>/>
 		<input type="hidden" name="id_lose" value=<%=member_B%>/>
@@ -69,8 +68,7 @@
 			<input type="hidden" name="id_lose" value=<%=member_A%>/>
 			<input class="btn btn-success" type="submit" value=<%=member_B_name%>  />
 	  </form>
-     
-     </div><!-- row -->
+	  
      <br>
      <div><a href="RankingServlet" class="btn btn-info">神7を見る</a></div>
     </div><!-- /.container -->
