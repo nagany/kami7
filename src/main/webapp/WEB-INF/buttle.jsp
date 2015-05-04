@@ -71,6 +71,8 @@
 	  </form>
      
      </div><!-- row -->
+     
+     <div><a href="RankingServlet">神7は…</a></div>
     </div><!-- /.container -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
