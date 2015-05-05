@@ -34,23 +34,28 @@ public class RankingServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		HttpSession session = request.getSession();
+		HttpSession session = request.getSession(true);
 		boolean login_flag = false;
-		login_flag = (Boolean) session.getAttribute("login_flag");
+		
+		try {
+			login_flag = (Boolean) session.getAttribute("login_flag");
+			if(login_flag){
+				//ログインしている場合
 
-		if(login_flag){
-			//ログインしている場合
+				//上位7人の名前を取得
+				String[] rank = this.business.getKami7();
 
-			//上位7人の名前を取得
-			String[] rank = this.business.getKami7();
+				request.setAttribute("rank", rank);
 
-			request.setAttribute("rank", rank);
-
-			request.getRequestDispatcher("WEB-INF/ranking.jsp").forward(request, response);
-		}else{
+				request.getRequestDispatcher("WEB-INF/ranking.jsp").forward(request, response);
+			}else{
+				request.getRequestDispatcher("login.html").forward(request, response);
+			}
+			
+		} catch (NullPointerException e) {
 			request.getRequestDispatcher("login.html").forward(request, response);
 		}
-	
+
 	}
 
 	/**

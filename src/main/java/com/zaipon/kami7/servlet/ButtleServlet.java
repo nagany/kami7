@@ -48,30 +48,37 @@ public class ButtleServlet extends HttpServlet {
 		
 		HttpSession session = request.getSession();
 		boolean login_flag = false;
-		login_flag = (Boolean) session.getAttribute("login_flag");
+		
+		try {
 
-		if(login_flag){
-			HashSet<MemberForm> pair = this.business.getPair(1);
+			login_flag = (Boolean) session.getAttribute("login_flag");
 
-			ArrayList<MemberForm> list = new ArrayList<MemberForm>(pair);
-			
-			//対戦相手を選ぶ処理
-			String nameA = list.get(0).getMemberName();
-			String idA = list.get(0).getMemberId();
-			String nameB = list.get(1).getMemberName();
-			String idB = list.get(1).getMemberId();
-			request.setAttribute("member_A", idA);
-			request.setAttribute("member_B", idB);
-			request.setAttribute("member_A_name", nameA);
-			request.setAttribute("member_B_name", nameB);
+			if(login_flag){
+				HashSet<MemberForm> pair = this.business.getPair(1);
 
-			System.out.println("A, B");
+				ArrayList<MemberForm> list = new ArrayList<MemberForm>(pair);
+				
+				//対戦相手を選ぶ処理
+				String nameA = list.get(0).getMemberName();
+				String idA = list.get(0).getMemberId();
+				String nameB = list.get(1).getMemberName();
+				String idB = list.get(1).getMemberId();
+				request.setAttribute("member_A", idA);
+				request.setAttribute("member_B", idB);
+				request.setAttribute("member_A_name", nameA);
+				request.setAttribute("member_B_name", nameB);
 
-			request.getRequestDispatcher("WEB-INF/buttle.jsp").forward(request, response);
-			
-		}else{
+				System.out.println("A, B");
+
+				request.getRequestDispatcher("WEB-INF/buttle.jsp").forward(request, response);
+				
+			}else{
+				request.getRequestDispatcher("login.html").forward(request, response);
+			}
+		} catch (NullPointerException e) {
 			request.getRequestDispatcher("login.html").forward(request, response);
 		}
+		
 
 	}
 
