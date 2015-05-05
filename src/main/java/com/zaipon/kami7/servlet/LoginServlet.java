@@ -41,7 +41,7 @@ public class LoginServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String pass = request.getParameter("pass");
 
-		if(pass.equals("kami0315")){
+		if(pass.equals("kami7")){
 			//login success
 			HttpSession session = request.getSession(true);
 			session.setAttribute("login_flag", true);
