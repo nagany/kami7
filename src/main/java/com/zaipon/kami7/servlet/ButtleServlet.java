@@ -46,7 +46,7 @@ public class ButtleServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		
-		HttpSession session = request.getSession(true);
+		HttpSession session = request.getSession();
 		boolean login_flag = false;
 		login_flag = (Boolean) session.getAttribute("login_flag");
 

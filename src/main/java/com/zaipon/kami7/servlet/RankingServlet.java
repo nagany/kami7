@@ -34,7 +34,7 @@ public class RankingServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		HttpSession session = request.getSession(true);
+		HttpSession session = request.getSession();
 		boolean login_flag = false;
 		login_flag = (Boolean) session.getAttribute("login_flag");
 
