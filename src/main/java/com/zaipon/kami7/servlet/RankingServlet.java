@@ -10,14 +10,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.zaipon.kami7.business.MemberBusiness;
 
+import com.zaipon.kami7.business.MemberBusiness;
 /**
  * Servlet implementation class RankingServlet
  */
 @WebServlet("/RankingServlet")
 public class RankingServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
+
 	private MemberBusiness business;
 
     /**
@@ -56,6 +57,6 @@ public class RankingServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+		this.doGet(request, response);
 	}
 }
