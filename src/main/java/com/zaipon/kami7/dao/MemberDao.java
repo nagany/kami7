@@ -97,7 +97,7 @@ public class MemberDao {
 		try {
 			//con = createConnection();
 			con = ConnectionUtility.getConnection();
-			Integer id = this.getCount();
+			Integer id = this.getCount()+1;
 			
 			StringBuilder sb = new StringBuilder();
 			sb.append("insert").append("\r\n");
