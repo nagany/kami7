@@ -97,11 +97,12 @@ public class MemberDao {
 		try {
 			//con = createConnection();
 			con = ConnectionUtility.getConnection();
+			Integer id = this.getCount();
 			
 			StringBuilder sb = new StringBuilder();
 			sb.append("insert").append("\r\n");
-			sb.append("into public.member (　member_name )").append("\r\n");
-			sb.append("values ('"+memberName+"');").append("\r\n");
+			sb.append("into public.member ( member_id,member_name )").append("\r\n");
+			sb.append("values ("+id+",'"+memberName+"');").append("\r\n");
 
 			
 			String sql = sb.toString();
@@ -170,4 +171,43 @@ public class MemberDao {
 		}
 	}
 
+	public Integer getCount(){
+		Connection con = null;
+		ConnectionUtility connUtil = new ConnectionUtility();
+		
+		try {
+			//con = createConnection();
+			con = ConnectionUtility.getConnection();
+			
+			StringBuilder sb = new StringBuilder();
+			sb.append("select").append("\r\n");
+			sb.append("count(*)").append("\r\n");
+			sb.append("from").append("\r\n");
+			sb.append("member;").append("\r\n");
+			
+			String sql = sb.toString();
+			
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+			
+			Integer cnt = 0;
+			while(rs.next()){
+				cnt = rs.getInt(1);
+			}
+			return cnt;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}catch (Exception e){
+			e.printStackTrace();
+			return null;
+		} finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			};
+		}
+	}
 }

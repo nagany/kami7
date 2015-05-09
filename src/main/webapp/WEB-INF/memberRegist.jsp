@@ -49,7 +49,7 @@
 		<br>
 		<br>
 		<br>
-	  <a>メンバ名を入力</a>
+	  <p>メンバ名を入力</p>
       <form action="MemberServlet" method="post" style="display:inline;">
 		<input type="text" name="member_name"/>
 		<input class="btn btn-success" type="submit" value=追加  />
