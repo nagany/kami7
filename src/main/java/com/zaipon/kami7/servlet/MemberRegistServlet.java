@@ -13,7 +13,7 @@ import com.zaipon.kami7.business.MemberBusiness;
 /**
  * Servlet implementation class MemberRegistServlet
  */
-@WebServlet("/MemberServlet/new")
+@WebServlet("/MemberRegistServlet")
 public class MemberRegistServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private MemberBusiness business;
