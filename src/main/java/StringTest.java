@@ -2,7 +2,7 @@
 public class StringTest {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		/*
 		StringBuilder sb = new StringBuilder();
 		sb.append("select").append("\r\n");
 		sb.append("rate.category_id, rate.member_id, rate.rate, member.member_name, category.category_id").append("\r\n");
@@ -16,6 +16,16 @@ public class StringTest {
 
 		String sql = sb.toString();
 		System.out.println(sql);
+		*/
+		
+		double dbl;
+		int	intv;
+		for (int i = 0; i < 100; i++) {
+
+			dbl = (Math.random()*24);
+			intv = (int) dbl;
+			System.out.println(intv);
+		}
 	}
 
 }

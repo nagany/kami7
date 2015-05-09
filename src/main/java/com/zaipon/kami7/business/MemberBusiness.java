@@ -51,9 +51,10 @@ public class MemberBusiness {
 		List<MemberForm> list = this.getEntry(categoryId);
 		HashSet<MemberForm> pair = new HashSet<MemberForm>();
 		int randIndex;
+		double rand;
 		while(pair.size() != 2){
-			randIndex = (int)(Math.random()*list.size());
-			System.out.println(randIndex);
+			rand = (Math.random()*list.size());
+			randIndex = (int) rand;
 			pair.add(list.get(randIndex));
 		}
 		return pair;
