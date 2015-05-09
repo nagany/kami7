@@ -99,4 +99,8 @@ public class MemberBusiness {
 			kami7[i] =  sortedData.get(i).getMemberName();
 		return kami7;
 	}
+
+	public void insertRate(String memberId, String categoryId) {
+		this.rateDao.insert(memberId,categoryId);
+	}
 }

@@ -147,4 +147,36 @@ public class RateDao {
 			}
 		}
 	}
+
+	public void insert(String memberId, String categoryId) {
+		Connection con = null;
+		ConnectionUtility connUtil = new ConnectionUtility();
+
+		try {
+			con = ConnectionUtility.getConnection();
+			
+			StringBuilder sb = new StringBuilder();
+			sb.append("insert").append("\r\n");
+			sb.append("into public.rate ( member_id,category_id,rate,delete_flag )").append("\r\n");
+			sb.append("values ("+memberId+","+categoryId+",1500,false);").append("\r\n");
+
+			
+			String sql = sb.toString();
+			
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}catch (Exception e){
+			e.printStackTrace();
+		} finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			};
+		}
+	}
 }

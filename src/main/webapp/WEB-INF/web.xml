@@ -33,6 +33,12 @@
 		<description></description>
 		<servlet-class>com.zaipon.kami7.servlet.MemberRegistServlet</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>RateRegistServlet</servlet-name>
+		<display-name>RateRegistServlet</display-name>
+		<description></description>
+		<servlet-class>com.zaipon.kami7.servlet.RateRegistServlet</servlet-class>
+	</servlet>
 
 	<servlet-mapping>
 		<servlet-name>LoginServlet</servlet-name>
@@ -57,5 +63,9 @@
 	<servlet-mapping>
 		<servlet-name>MemberRegistServlet</servlet-name>
 		<url-pattern>/MemberRegistServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RateRegistServlet</servlet-name>
+		<url-pattern>/RateRegistServlet</url-pattern>
 	</servlet-mapping>
 </web-app>

@@ -38,7 +38,17 @@ public class RatingServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+
+		HttpSession session = request.getSession(true);
+		boolean login_flag = false;
+		login_flag = (Boolean) session.getAttribute("login_flag");
+		
+		if(login_flag){
+			//ログインしている場合
+			request.getRequestDispatcher("WEB-INF/entryRegist.jsp").forward(request, response);
+		}else{
+			request.getRequestDispatcher("login.html").forward(request, response);
+		}
 	}
 
 	/**
