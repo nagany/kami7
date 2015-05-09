@@ -53,7 +53,7 @@
 	  <p>メンバIDを入力</p>
 		<input type="text" name="member_id" value=""/>
 	  <p>カテゴリIDを入力</p>
-		<input type="text" name="categoty_id" value=""/>
+		<input type="text" name="category_id" value=""/>
 		<input class="btn btn-success" type="submit" value=追加  />
 	  </form>
 	<br>
