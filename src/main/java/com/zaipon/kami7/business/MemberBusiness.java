@@ -81,6 +81,14 @@ public class MemberBusiness {
 			return (int) Math.round(value);
 		}
 	}
+	
+	public void insertMember(String memberName){
+		this.memberDao.insert(memberName);
+	}
+	
+	public ArrayList<MemberDto> getAllMember(){
+		return this.memberDao.searchAll();
+	}
 
 	public String[] getKami7(){
 		String[] kami7 = new String[7];

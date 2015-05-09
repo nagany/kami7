@@ -90,5 +90,84 @@ public class MemberDao {
 		}
 	}
 
+	public void insert(String memberName){
+		Connection con = null;
+		ConnectionUtility connUtil = new ConnectionUtility();
+
+		try {
+			//con = createConnection();
+			con = ConnectionUtility.getConnection();
+			
+			StringBuilder sb = new StringBuilder();
+			sb.append("insert").append("\r\n");
+			sb.append("into public.member (　member_name )").append("\r\n");
+			sb.append("values ('"+memberName+"');").append("\r\n");
+
+			
+			String sql = sb.toString();
+			
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}catch (Exception e){
+			e.printStackTrace();
+		} finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			};
+		}
+	}
+	
+	public ArrayList<MemberDto> searchAll(){
+		Connection con = null;
+		ConnectionUtility connUtil = new ConnectionUtility();
+		
+		try {
+			//con = createConnection();
+			con = ConnectionUtility.getConnection();
+			System.out.println("==== getConnection  ===");
+			
+			StringBuilder sb = new StringBuilder();
+			sb.append("select").append("\r\n");
+			sb.append("member.member_id, member.member_name").append("\r\n");
+			sb.append("from").append("\r\n");
+			sb.append("member").append("\r\n");
+			sb.append("order by member.member_id;").append("\r\n");
+			
+			String sql = sb.toString();
+			
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(sql);
+
+			ArrayList<MemberDto> memberDtoList = new ArrayList<MemberDto>();
+			MemberDto memberDto;
+			
+			while(rs.next()){
+				memberDto = new MemberDto();
+				memberDto.setMemberId(rs.getInt("member_id"));
+				memberDto.setMemberName(rs.getString("member_name"));
+				memberDtoList.add(memberDto);
+			}
+			return memberDtoList;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}catch (Exception e){
+			e.printStackTrace();
+			return null;
+		} finally {
+			try {
+				con.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			};
+		}
+	}
 
 }
