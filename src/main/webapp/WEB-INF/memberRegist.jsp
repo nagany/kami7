@@ -51,11 +51,11 @@
 		<br>
 	  <p>メンバ名を入力</p>
       <form action="MemberServlet" method="post" style="display:inline;">
-		<input type="text" name="member_name"/>
+		<input type="text" name="member_name" value=""/>
 		<input class="btn btn-success" type="submit" value=追加  />
 	  </form>
 	<br>
-     <div><a href="MemberServlet class="btn btn-info">メンバー一覧</a></div>
+     <div><a href="MemberServlet" class="btn btn-info">メンバー一覧</a></div>
 
 	</div><!-- /.container -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
