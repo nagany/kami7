@@ -49,7 +49,7 @@
 		<br>
 		<br>
 		<br>
-      <form action="MemberServlet" method="post" style="display:inline;">
+      <form action="RateRegistServlet" method="post" style="display:inline;">
 	  <p>メンバIDを入力</p>
 		<input type="text" name="member_id" value=""/>
 	  <p>カテゴリIDを入力</p>

@@ -53,6 +53,7 @@
 	<table class="table table-striped table-bordered table-hover table-condensed">
 	
      <div><a href="MemberRegistServlet" class="btn btn-info">メンバーを追加する</a></div>
+     <div><a href="MemberRegistServlet" class="btn btn-info">kami7にエントリーする</a></div>
      
 	  <tr>
 	    <th>ID</th><th>メンバー</th>
