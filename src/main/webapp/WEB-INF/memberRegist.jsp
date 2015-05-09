@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:useBean id="memberList" scope="request" type="java.util.ArrayList<com.zaipon.kami7.dto.MemberDto>" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
   <head>
@@ -50,24 +49,13 @@
 		<br>
 		<br>
 		<br>
-	<table class="table table-striped table-bordered table-hover table-condensed">
-	  <tr>
-	    <th>ID</th><th>メンバー</th>
-  	  <%
-		for (com.zaipon.kami7.dto.MemberDto member : memberList){
-			out.println("<tr>");
-			out.println("<td>");
-			out.println(member.getMemberId());
-			out.println("</td>");
-			out.println("<td>");
-			out.println(member.getMemberName());
-			out.println("</td>");
-			out.println("</tr>");
-		}
-	  %>
-	</table>
+	  <a>メンバ名を入力</a>
+      <form action="MemberServlet" method="post" style="display:inline;">
+		<input type="text" name="member_name"/>
+		<input class="btn btn-success" type="submit" value=追加  />
+	  </form>
 	<br>
-     <div><a href="MemberServlet/new" class="btn btn-info">メンバーを追加する</a></div>
+     <div><a href="MemberServlet class="btn btn-info">メンバー一覧</a></div>
 
 	</div><!-- /.container -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
