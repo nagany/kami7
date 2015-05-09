@@ -51,6 +51,9 @@
 		<br>
 		<br>
 	<table class="table table-striped table-bordered table-hover table-condensed">
+	
+     <div><a href="MemberServlet/new" class="btn btn-info">メンバーを追加する</a></div>
+     
 	  <tr>
 	    <th>ID</th><th>メンバー</th>
   	  <%
@@ -67,7 +70,6 @@
 	  %>
 	</table>
 	<br>
-     <div><a href="MemberServlet/new" class="btn btn-info">メンバーを追加する</a></div>
 
 	</div><!-- /.container -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

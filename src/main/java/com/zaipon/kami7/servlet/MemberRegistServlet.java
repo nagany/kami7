@@ -31,7 +31,7 @@ public class MemberRegistServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("memberRegist.html").forward(request, response);
+		request.getRequestDispatcher("memberRegist.jsp").forward(request, response);
 	}
 
 	/**
