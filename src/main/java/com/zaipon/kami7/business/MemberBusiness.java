@@ -37,10 +37,10 @@ public class MemberBusiness {
 			form.setMemberId(dto.getMemberId().toString());
 			form.setMemberName(dto.getMemberName());
 
-			List<String> list = dto.getImgPaths();
-			randIndex = (int)(Math.random()*list.size());
+			//List<String> list = dto.getImgPaths();
+			//randIndex = (int)(Math.random()*list.size());
 
-			form.setImgPath(list.get(randIndex));
+			//form.setImgPath(list.get(randIndex));
 
 			resultList.add(form);
 		}
