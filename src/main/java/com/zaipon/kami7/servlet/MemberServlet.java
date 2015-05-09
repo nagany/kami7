@@ -66,7 +66,7 @@ public class MemberServlet extends HttpServlet {
 			login_flag = (Boolean) session.getAttribute("login_flag");
 			if(login_flag){
 				//ログインしている場合
-				this.business.insertMember((String) session.getAttribute("member_name"));
+				this.business.insertMember(request.getParameter("member_name"));
 
 				String url = "/MemberServlet";
 			    response.sendRedirect(url);
